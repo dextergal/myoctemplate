@@ -1,0 +1,110 @@
+@mixin respond-to($media) {
+  @if $media==deslg {
+    @media (max-width: $deslg) {
+      @content;
+    }
+  }
+
+  @if $media==deslgmin {
+    @media (min-width: $deslg) {
+      @content;
+    }
+  }
+
+  @else if $media==desmd {
+    @media (max-width: $desmd) {
+      @content;
+    }
+  }
+
+  @else if $media==desmdmin {
+    @media (min-width: $desmd) {
+      @content;
+    }
+  }
+
+  // @else if $media==desmdmin {
+  //   @media (min-width: $desmd + 1px) {
+  //     @content;
+  //   }
+  // }
+
+  @else if $media==des {
+    @media (max-width: $des) {
+      @content;
+    }
+  }
+
+  @else if $media==desmin {
+    @media (min-width: $des) {
+      @content;
+    }
+  }
+
+  @else if $media==lap {
+    @media (max-width: $lap) {
+      @content;
+    }
+  }
+
+  @else if $media==lapmin {
+    @media (min-width: $lap) {
+      @content;
+    }
+  }
+
+  @else if $media==tab {
+    @media (max-width: $tab) {
+      @content;
+    }
+  }
+
+  @else if $media==tabmin {
+    @media (min-width: $tabmin) {
+      @content;
+    }
+  }
+
+
+  @else if $media==tabon {
+    @media (min-width: $mob + 1) and (max-width: $lap) {
+      @content;
+    }
+  }
+
+  @else if $media==mob {
+    @media (max-width: $mob) {
+      @content;
+    }
+  }
+
+  @else if $media==sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-width: $media + px) {
+      @content;
+    }
+  }
+}
+
+@mixin transition {
+  transition: $transition;
+}
+
+@mixin box-shadow {
+  box-shadow: $box-shadow;
+}
+
+@mixin spin {
+  animation: spin .2s linear;
+}
+
+@mixin v-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

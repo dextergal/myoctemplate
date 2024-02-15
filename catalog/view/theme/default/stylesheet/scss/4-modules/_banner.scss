@@ -1,0 +1,22 @@
+.slider-slideshow-description-texts {
+  // text-align: center;
+  // text-transform: uppercase;
+  // letter-spacing: 3px;
+
+  >[class^=slideshow-text-] {
+    // font-size: 70px !important;
+
+    @include respond-to(des) {
+      // font-size: 40px !important;
+    }
+
+    @include respond-to(mob) {
+      // font-size: 25px !important;
+    }
+  }
+
+  .slider-slideshow-description-link {
+
+    .btn {}
+  }
+}

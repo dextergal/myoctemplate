@@ -1,0 +1,110 @@
+.product-product {
+    .pname {
+        color: #8a7334;
+        font-family: 'poppinsregular';
+        margin-bottom: 1em;
+    }
+    .product-image-main-container {
+        
+        margin-right: 9px;
+        margin-left: 9px;
+    }
+     .product-image-additional-container {
+         padding: 0;
+         padding-right: .2em;
+         .slick-slide {
+            margin: 0 14px;
+         }
+         .slick-no-slide {
+             margin-left: 0;
+             margin-right: 0;
+            }
+         .slick-nav {
+             display: none !important;
+            }
+         img {
+                border: 1px solid #d6d6d6;
+                padding: 0; 
+                border-width:1px ; 
+                transition: 0.3s;
+                &:hover {
+                    border-color:  #a3bc3e; 
+                    border-width: 1px;
+                    outline: none;
+                }
+            }
+        .featured .slick-no-slide {margin: 0;    padding: 0 2em;}
+    }
+    .product-description {
+        & + .input-group-flex {
+            display: none;
+        }
+    }
+    #product {
+        max-width: 100%;
+        padding-top: 2em;
+        @include respond-to (767) {
+            text-align: center;
+        }
+        .input-group {
+            // display: none;
+            // width: 80% !important;
+        }
+        hr, h3 {
+            display: none;
+        }
+        .form-group {
+            display: flex;
+            @include respond-to (767) {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+            .text-danger {
+                display: none;
+            }
+            select {  //optional
+                height: 44px !important;
+            }
+            textarea { //optional
+                width: 100% !important;
+                padding: 1.5em;
+            }
+
+            .input-group-addon {
+                display: block;
+            }
+            & > * {
+                flex: 0 1 auto;
+                width: 22%;
+                font-size: 13px;
+                background: transparent;
+                border: 0;
+                text-align: left;
+                padding: 0;
+                // padding-right: 1em;
+                @include respond-to (1199) {
+                    width: 30%;
+                    // padding-right: 1em;
+                }
+                @include respond-to (767) {
+                    width: 100%;
+                    margin-bottom: 1em;
+                }
+                &.control-label {
+                    &:before {
+                        display: none;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 50%;
+                    @include respond-to (1199) {
+                        width: 70%;
+                    }
+                    @include respond-to (767) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

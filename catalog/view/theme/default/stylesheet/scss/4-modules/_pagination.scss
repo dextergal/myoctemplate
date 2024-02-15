@@ -1,0 +1,27 @@
+.pagination {
+	text-align: center;
+	padding-bottom: 3em;
+	.active {
+		span {
+			color: $primary !important;
+			border-color: $primary !important;
+			background: transparent;
+		}
+	}
+}
+.pagination span, .pagination a {
+	margin: 0 .3em !important;
+	border: 1.2px solid #ccc !important;
+	border-radius: 50px !important;
+	display: inline-block;
+	height: 3em;
+	width: 3em;
+	color: #ccc !important;
+}
+.pagination>li>a,  .pagination>li>span {
+	line-height: 2em;
+	padding: 6px 4px;
+}
+
+
+

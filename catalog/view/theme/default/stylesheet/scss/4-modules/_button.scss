@@ -1,0 +1,63 @@
+a {
+  color: $primary;
+}
+
+.btn {
+  border-radius: $radius;
+  @include transition;
+
+  &.btn-primary,
+  &.btn-default {
+    color: #fff;
+    background-color: $primary !important;
+    border: $primary !important;
+    &:hover {
+      background-color: $secondary !important;
+      border-color: $secondary !important;
+    }
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.cart-dorpdown-footer {
+
+  a {
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+}
+
+.label-primary {
+  background-color: $primary !important;
+}
+
+.swal2-confirm {
+  color: #fff;
+  background-color: $primary !important;
+  border: $primary !important;
+}
+
+#quickcheckout-back {
+  background-color: $secondary;
+  border-color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+span.label.out-of-stock {
+  min-width: 170px;
+  padding: 13px 14px;
+  text-transform: uppercase;
+
+  @include respond-to(sm) {
+    min-width: 70%;
+  }
+}
